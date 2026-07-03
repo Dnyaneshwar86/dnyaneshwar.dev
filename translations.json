@@ -1,0 +1,86 @@
+{
+  "en": {
+    "nav_about": "About",
+    "nav_services": "Products & Services",
+    "nav_case_studies": "Case Studies",
+    "nav_contact": "Contact Me",
+    
+    "hero_greeting": "Map of the Digital Revolution",
+    "hero_ai_badge": "AI-Powered Professional",
+    "name": "Dnyaneshwar Bhanudas <span class='neon-text'>Adagale</span>",
+    "hero_title": "Digital Architect & Automation Specialist",
+    "hero_subtitle": "Transforming ideas into digital reality.",
+    "hero_bullet_1": "100+ Digital Product Categories",
+    "hero_bullet_2": "AI-Generated Automated Workflows",
+    "hero_bullet_3": "Antigravity 2.0 Advanced Technology",
+    "hero_cta_resume": "Resume",
+    "contact_btn": "Book a Free Consultation",
+    
+    "services_title": "My Core Services",
+    "service_1": "Data Automation & Processing",
+    "service_2": "Custom Software & AI Solutions",
+    
+    "projects_title": "Featured Projects",
+    "project_1": "Mega Event Logistics: Managed complete material planning and execution for a 1000+ people catering project.",
+    "project_2": "Online Data Management Workflow",
+    
+    "demo_title": "Client Demo <span class='neon-text-alt'>& Interaction</span>",
+    "demo_desc": "A 'Demo Section' to give clients hands-on experience with the software before committing."
+  },
+  "mr": {
+    "nav_about": "About",
+    "nav_services": "Products & Services",
+    "nav_case_studies": "Case Studies",
+    "nav_contact": "Contact Me",
+    
+    "hero_greeting": "डिजिटल क्रांतीचा संपूर्ण नकाशा",
+    "hero_ai_badge": "AI-Powered Professional",
+    "name": "ज्ञानेश्वर भानुदास <span class='neon-text'>आडागळे</span>",
+    "hero_title": "डिजिटल आर्किटेक्ट आणि ऑटोमेशन स्पेशालिस्ट",
+    "hero_subtitle": "कल्पनांचे डिजिटल वास्तवात रूपांतर.",
+    "hero_bullet_1": "१००+ डिजिटल प्रॉडक्ट कॅटेगरीज",
+    "hero_bullet_2": "AI-व्युत्पन्न स्वयंचलित वर्कफ्लो",
+    "hero_bullet_3": "Antigravity 2.0 प्रगत तंत्रज्ञान",
+    "hero_cta_resume": "रिझ्युमे (Resume)",
+    "contact_btn": "मोफत कन्सल्टेशन बुक करा",
+
+    "services_title": "माझ्या प्रमुख सेवा",
+    "service_1": "डेटा ऑटोमेशन आणि प्रोसेसिंग",
+    "service_2": "कस्टम सॉफ्टवेअर आणि एआय सोल्यूशन्स",
+    
+    "projects_title": "महत्त्वाचे प्रोजेक्ट्स",
+    "project_1": "मेगा इव्हेंट लॉजिस्टिक: १००० पेक्षा जास्त लोकांसाठी केटरिंग आणि साहित्याचे अचूक नियोजन व व्यवस्थापन.",
+    "project_2": "ऑनलाइन डेटा मॅनेजमेंट वर्कफ्लो",
+
+    "demo_title": "क्लायंट डेमो <span class='neon-text-alt'>आणि संवाद</span>",
+    "demo_desc": "क्लायंट्सना तुमच्या कामाचा प्रत्यक्ष अनुभव देण्यासाठी एक 'डेमो सेक्शन' जिथे ते सॉफ्टवेअर वापरून पाहू शकतील."
+  },
+  "hi": {
+    "nav_about": "About",
+    "nav_services": "Products & Services",
+    "nav_case_studies": "Case Studies",
+    "nav_contact": "Contact Me",
+    
+    "hero_greeting": "डिजिटल क्रांति का संपूर्ण नक्शा",
+    "hero_ai_badge": "AI-Powered Professional",
+    "name": "ज्ञानेश्वर भानुदास <span class='neon-text'>आडागळे</span>",
+    "hero_title": "डिजिटल आर्किटेक्ट और ऑटोमेशन स्पेशलिस्ट",
+    "hero_subtitle": "विचारों को डिजिटल वास्तविकता में बदलना।",
+    "hero_bullet_1": "१००+ डिजिटल उत्पाद श्रेणियां",
+    "hero_bullet_2": "AI-जनित स्वचालित वर्कफ़्लो",
+    "hero_bullet_3": "Antigravity 2.0 उन्नत तकनीक",
+    "hero_cta_resume": "रिज्यूमे (Resume)",
+    "contact_btn": "मुफ्त परामर्श बुक करें",
+
+    "services_title": "मेरी प्रमुख सेवाएं",
+    "service_1": "डेटा ऑटोमेशन और प्रोसेसिंग",
+    "service_2": "कस्टम सॉफ्टवेयर और एआई समाधान",
+    
+    "projects_title": "प्रमुख प्रोजेक्ट्स",
+    "project_1": "मेगा इवेंट लॉजिस्टिक्स: 1000+ लोगों के लिए कैटरिंग सामग्री और व्यवस्था का सफल संचालन।",
+    "project_2": "ऑनलाइन डेटा मैनेजमेंट वर्कफ़्लो",
+
+    "demo_title": "क्लाइंट डेमो <span class='neon-text-alt'>और संवाद</span>",
+    "demo_desc": "क्लाइंट्स को आपके काम का प्रत्यक्ष अनुभव देने के लिए एक 'डेमो सेक्शन' जहां वे सॉफ्टवेयर का उपयोग कर सकें।"
+  }
+}

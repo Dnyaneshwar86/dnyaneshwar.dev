@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Solutions & Future - Dnyaneshwar B. Adagale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --text-main: #f0f0f0;
+            --neon-green: #39ff14;
+            --neon-green-glow: rgba(57, 255, 20, 0.4);
+            --transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem;
+            opacity: 0;
+            transform: scale(0.9) translateX(50px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1) translateX(0);
+            pointer-events: all;
+            z-index: 10;
+        }
+
+        .slide.prev {
+            transform: scale(0.9) translateX(-50px);
+        }
+
+        .title {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .neon {
+            color: var(--neon-green);
+            text-shadow: 0 0 10px var(--neon-green-glow), 0 0 20px var(--neon-green-glow);
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .content-box {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(57, 255, 20, 0.2);
+            padding: 3rem;
+            border-radius: 16px;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(57, 255, 20, 0.05);
+            backdrop-filter: blur(10px);
+            text-align: left;
+        }
+
+        ul {
+            list-style: none;
+            font-size: 1.4rem;
+            line-height: 2;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--neon-green);
+            font-weight: bold;
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            background: transparent;
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background: var(--neon-green);
+            color: #000;
+            box-shadow: 0 0 15px var(--neon-green-glow);
+        }
+
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: var(--neon-green);
+            width: 0%;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px var(--neon-green-glow);
+            z-index: 100;
+        }
+
+        .slide-counter {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 2rem;
+            font-size: 1.2rem;
+            color: #666;
+            z-index: 100;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container" id="slider">
+        
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <h1 class="title">ज्ञानेश्वर बी. <span class="neon">अडगळे</span></h1>
+            <h2 class="subtitle">डिजिटल सोल्यूशन्स आणि भविष्य</h2>
+            <p style="font-size: 1.2rem; color: #888; margin-top: 2rem;">Advanced Coding, Programming, and AI Automation</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <h1 class="title">डिजिटल <span class="neon">प्रॉडक्ट इकोसिस्टम</span></h1>
+            <h2 class="subtitle">एक धावता आढावा</h2>
+            <div class="content-box">
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #ccc;">आपण कोडिंग आणि प्रोग्रामिंगच्या मदतीने एक संपूर्ण डिजिटल इकोसिस्टम तयार करू शकतो.</p>
+                <ul>
+                    <li>Web & Mobile</li>
+                    <li>AI & Data Science</li>
+                    <li>Software & SaaS</li>
+                    <li>Gaming, Media, Security & Cloud</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <h1 class="title">Web & <span class="neon">Mobile</span></h1>
+            <h2 class="subtitle">वेबसाईट आणि मोबाईल ॲप्सची दुनिया</h2>
+            <div class="content-box">
+                <ul>
+                    <li><strong>वेबसाईट्स:</strong> पोर्टफोलिओ, ई-कॉमर्स, ब्लॉग्स, आणि प्रगत वेब ॲप्लिकेशन्स.</li>
+                    <li><strong>मोबाईल ॲप्स:</strong> अँड्रॉइड (Android) आणि iOS ॲप्स, क्रॉस-प्लॅटफॉर्म डेव्हलपमेंट.</li>
+                    <li><strong>टेक्नॉलॉजी:</strong> React, Node.js, Flutter, HTML/CSS.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <h1 class="title">AI & <span class="neon">Data Science</span></h1>
+            <h2 class="subtitle">ऑटोमेशन आणि प्रगत डेटा ॲनालिटिक्स</h2>
+            <div class="content-box">
+                <ul>
+                    <li><strong>AI टूल्स:</strong> कस्टम चॅटबॉट्स, जेनेरेटिव्ह AI (Generative AI) इंटिग्रेशन.</li>
+                    <li><strong>डेटा ऑटोमेशन:</strong> मॅन्युअल डेटा एंट्रीचे ऑटोमेशन (AI-Assisted Workflows).</li>
+                    <li><strong>ॲनालिटिक्स:</strong> प्रेडिक्टिव्ह मॉडेल्स आणि डॅशबोर्ड्स.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide">
+            <h1 class="title">Software & <span class="neon">SaaS</span></h1>
+            <h2 class="subtitle">एंटरप्राइझ लेव्हल सॉफ्टवेअर सोल्यूशन्स</h2>
+            <div class="content-box">
+                <ul>
+                    <li><strong>SaaS Development:</strong> दरमहा सबस्क्रिप्शनवर चालणारे वेब-बेस्ड टूल्स.</li>
+                    <li><strong>एंटरप्राइझ सिस्टीम:</strong> ERP, CRM (ग्राहक व्यवस्थापन), आणि इन्व्हेंटरी सॉफ्टवेअर.</li>
+                    <li><strong>स्केलेबिलिटी:</strong> क्लाउड-नेटिव्ह आर्किटेक्चर.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide">
+            <h1 class="title">Security & <span class="neon">Cloud</span></h1>
+            <h2 class="subtitle">सायबर सुरक्षा आणि क्लाउड इन्फ्रास्ट्रक्चर</h2>
+            <div class="content-box">
+                <ul>
+                    <li><strong>DevOps:</strong> सर्व्हर ऑटोमेशन आणि CI/CD पाईपलाईन्स.</li>
+                    <li><strong>क्लाउड सर्व्हिसेस:</strong> AWS, Google Cloud, आणि Azure मॅनेजमेंट.</li>
+                    <li><strong>डेटा सिक्युरिटी:</strong> एन्क्रिप्शन आणि सुरक्षित एपीआय (API) डिझाईन.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide">
+            <h1 class="title">The Antigravity <span class="neon">Stack</span></h1>
+            <h2 class="subtitle">Antigravity 2.0 आणि कोडिंगचे भविष्य</h2>
+            <div class="content-box">
+                <ul>
+                    <li><strong>मल्टी-एजंट वर्कफ्लो:</strong> Antigravity 2.0 चा वापर करून अत्यंत वेगवान डेव्हलपमेंट.</li>
+                    <li><strong>AI को-पायलट:</strong> कोड जनरेशन, डिबगिंग आणि ऑटोमेटेड टेस्टिंग.</li>
+                    <li><strong>भविष्यवेधी तंत्रज्ञान:</strong> क्लायंट्सना सर्वात जलद आणि अचूक रिझल्ट्स.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide">
+            <h1 class="title">Let's <span class="neon">Connect</span></h1>
+            <h2 class="subtitle">तुमच्या स्वप्नांना डिजिटल रूप देऊया</h2>
+            <div class="content-box" style="text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 0.5rem; color: #fff;">ज्ञानेश्वर भानुदास अडगळे (DBA)</h3>
+                <p style="color: var(--neon-green); margin-bottom: 2rem; font-size: 1.2rem;">Data Specialist & AI Professional</p>
+                <p style="font-size: 1.2rem; color: #ccc; margin-bottom: 0.5rem;"><i class="fas fa-envelope"></i> contact@dnyaneshwar.dev</p>
+                <p style="font-size: 1.2rem; color: #ccc; margin-bottom: 2rem;"><i class="fas fa-globe"></i> www.dnyaneshwar.dev</p>
+                <p style="font-style: italic; color: #888;">"Empowering Business with Data Precision and AI-Driven Automation."</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="progress-bar" id="progress"></div>
+    <div class="slide-counter" id="counter">1 / 8</div>
+    
+    <div class="controls">
+        <button class="btn" id="prevBtn" title="Previous"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn" id="nextBtn" title="Next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const progressBar = document.getElementById('progress');
+            const counter = document.getElementById('counter');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function updateSlides() {
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active', 'prev');
+                    if (index === currentSlide) {
+                        slide.classList.add('active');
+                    } else if (index < currentSlide) {
+                        slide.classList.add('prev');
+                    }
+                });
+
+                // Update Progress Bar & Counter
+                const progress = ((currentSlide + 1) / totalSlides) * 100;
+                progressBar.style.width = progress + '%';
+                counter.innerText = `${currentSlide + 1} / ${totalSlides}`;
+            }
+
+            function nextSlide() {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlides();
+                }
+            }
+
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlides();
+                }
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Keyboard Navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === ' ') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            // Init
+            updateSlides();
+        });
+    </script>
+</body>
+</html>
